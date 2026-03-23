@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>de.mhus.lib</groupId>
-        <version>7.10.0-SNAPSHOT</version>
+        <version>7.9.1</version>
         <artifactId>mhus-karaf-oss</artifactId>
     </parent>
     <artifactId>mhus-ports</artifactId>
     <packaging>pom</packaging>
   <name>ports</name>
   <groupId>de.mhus.ports</groupId>
-  <version>7.5.0-SNAPSHOT</version>
+  <version>7.4.1</version>
 
   <description>A set of tools to improve OSGi frameworks and karaf</description>
   <url>http://www.mhus.info</url>
@@ -63,13 +63,12 @@
     <profiles>
         <profile>
             <id>deploy-ngnetwork</id>
-            <repositories>
+            <distributionManagement>
                 <repository>
                     <id>nexus_gammanetwork</id>
-                    <url>https://nexus.gammanetwork.de/repository/maven-snapshots</url>
-                    <snapshots><enabled>true</enabled></snapshots>
+                    <url>https://nexus.gammanetwork.de/repository/maven-releases</url>
                 </repository>
-            </repositories>
+            </distributionManagement>
         </profile>
     </profiles>
 </project>

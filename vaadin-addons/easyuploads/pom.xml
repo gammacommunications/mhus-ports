@@ -9,7 +9,7 @@
 
 	  <parent>
 	    <groupId>de.mhus.ports</groupId>
-	    <version>7.5.0-SNAPSHOT</version>
+	    <version>7.4.1</version>
 	    <artifactId>vaadin-addons</artifactId>
 	  </parent>
 
@@ -38,16 +38,13 @@
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
-
+    
     <build>
         <plugins>
         	<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
-                <configuration>
-                	<skip>true</skip>
-                </configuration>
         	</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -342,5 +339,17 @@
             <type>jar</type>
         </dependency>
     </dependencies>
+
+	<profiles>
+        <profile>
+            <id>deploy-ngnetwork</id>
+            <distributionManagement>
+                <repository>
+                    <id>nexus_gammanetwork</id>
+                    <url>https://nexus.gammanetwork.de/repository/maven-releases</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+	</profiles>
 
 </project>
